@@ -12,10 +12,14 @@
           <div class="container">
               {% if user.is_authenticated %}
                   <a href="{% url 'post_new' %}" class="top-menu">
-                      {% include './icons/file-earmark-plus.svg' %}
+                      {% include './icons/file-earmark-plus.svg' %} Add Post
                   </a>
+                  <a href="/accounts/logout" class="top-menu">Sign off</a>
+              {% else %}
+                  <div><a href="/accounts/login" class="top-menu">Login</a></div>
               {% endif %}
-              <h1><a href="/">Escape Blog</a></h1>
+              <div><h1><a href="/">Escape Blog</a></h1></div>
+              <div><h4><a href="/">Home</a></h4></div>
           </div>
         </header>
         <main class="container">
